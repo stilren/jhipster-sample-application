@@ -1,0 +1,36 @@
+{
+    "name": "Churn",
+    "fields": [
+        {
+            "fieldName": "chrunPerTick",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cronSchedule",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "delay",
+            "fieldType": "Duration"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "cohort",
+            "otherEntityRelationshipName": "churn",
+            "relationshipName": "cohort",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191130133328",
+    "entityTableName": "churn",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

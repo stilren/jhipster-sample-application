@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity Cohort.
+    -->
+    <changeSet id="20191130133324-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="user_acquisition_id"
+                                 baseTableName="cohort"
+                                 constraintName="fk_cohort_user_acquisition_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_acquisition"/>
+
+        <addForeignKeyConstraint baseColumnNames="churn_id"
+                                 baseTableName="cohort"
+                                 constraintName="fk_cohort_churn_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="churn"/>
+
+        <addForeignKeyConstraint baseColumnNames="revenue_id"
+                                 baseTableName="cohort"
+                                 constraintName="fk_cohort_revenue_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="revenue"/>
+
+        <addForeignKeyConstraint baseColumnNames="cohort_id"
+                                 baseTableName="cohort_scenario"
+                                 constraintName="fk_cohort_scenario_cohort_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="cohort"/>
+
+        <addForeignKeyConstraint baseColumnNames="scenario_id"
+                                 baseTableName="cohort_scenario"
+                                 constraintName="fk_cohort_scenario_scenario_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="scenario"/>
+        
+        <addForeignKeyConstraint baseColumnNames="team_id"
+                                 baseTableName="cohort"
+                                 constraintName="fk_cohort_team_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="team"/>
+
+    </changeSet>
+</databaseChangeLog>

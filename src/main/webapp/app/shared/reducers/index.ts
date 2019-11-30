@@ -11,6 +11,30 @@ import activate, { ActivateState } from 'app/modules/account/activate/activate.r
 import password, { PasswordState } from 'app/modules/account/password/password.reducer';
 import settings, { SettingsState } from 'app/modules/account/settings/settings.reducer';
 import passwordReset, { PasswordResetState } from 'app/modules/account/password-reset/password-reset.reducer';
+// prettier-ignore
+import cohort, {
+  CohortState
+} from 'app/entities/cohort/cohort.reducer';
+// prettier-ignore
+import scenario, {
+  ScenarioState
+} from 'app/entities/scenario/scenario.reducer';
+// prettier-ignore
+import team, {
+  TeamState
+} from 'app/entities/team/team.reducer';
+// prettier-ignore
+import revenue, {
+  RevenueState
+} from 'app/entities/revenue/revenue.reducer';
+// prettier-ignore
+import churn, {
+  ChurnState
+} from 'app/entities/churn/churn.reducer';
+// prettier-ignore
+import userAcquisition, {
+  UserAcquisitionState
+} from 'app/entities/user-acquisition/user-acquisition.reducer';
 /* jhipster-needle-add-reducer-import - JHipster will add reducer here */
 
 export interface IRootState {
@@ -23,6 +47,12 @@ export interface IRootState {
   readonly passwordReset: PasswordResetState;
   readonly password: PasswordState;
   readonly settings: SettingsState;
+  readonly cohort: CohortState;
+  readonly scenario: ScenarioState;
+  readonly team: TeamState;
+  readonly revenue: RevenueState;
+  readonly churn: ChurnState;
+  readonly userAcquisition: UserAcquisitionState;
   /* jhipster-needle-add-reducer-type - JHipster will add reducer type here */
   readonly loadingBar: any;
 }
@@ -37,6 +67,12 @@ const rootReducer = combineReducers<IRootState>({
   passwordReset,
   password,
   settings,
+  cohort,
+  scenario,
+  team,
+  revenue,
+  churn,
+  userAcquisition,
   /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
   loadingBar
 });

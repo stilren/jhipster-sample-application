@@ -1,0 +1,33 @@
+{
+    "name": "Team",
+    "fields": [
+        {
+            "fieldName": "teamName",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "scenario",
+            "otherEntityRelationshipName": "team",
+            "relationshipName": "scenario"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "cohort",
+            "otherEntityRelationshipName": "team",
+            "relationshipName": "cohort"
+        }
+    ],
+    "changelogDate": "20191130133326",
+    "entityTableName": "team",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

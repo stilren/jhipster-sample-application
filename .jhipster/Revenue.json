@@ -1,0 +1,36 @@
+{
+    "name": "Revenue",
+    "fields": [
+        {
+            "fieldName": "revenuePerTick",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cronSchedule",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "delay",
+            "fieldType": "Duration"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "cohort",
+            "otherEntityRelationshipName": "revenue",
+            "relationshipName": "cohort",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191130133327",
+    "entityTableName": "revenue",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

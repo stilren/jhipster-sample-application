@@ -1,0 +1,60 @@
+{
+    "name": "Cohort",
+    "fields": [
+        {
+            "fieldName": "cohortName",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "userAcquisition",
+            "otherEntityRelationshipName": "cohort",
+            "relationshipName": "userAcquisition",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "churn",
+            "otherEntityRelationshipName": "cohort",
+            "relationshipName": "churn",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "revenue",
+            "otherEntityRelationshipName": "cohort",
+            "relationshipName": "revenue",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "scenario",
+            "otherEntityRelationshipName": "cohort",
+            "relationshipName": "scenario",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "team",
+            "otherEntityRelationshipName": "cohort",
+            "relationshipName": "team",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191130133324",
+    "entityTableName": "cohort",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

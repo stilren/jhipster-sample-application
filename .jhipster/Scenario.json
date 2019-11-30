@@ -1,0 +1,36 @@
+{
+    "name": "Scenario",
+    "fields": [
+        {
+            "fieldName": "scenarioName",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "team",
+            "otherEntityRelationshipName": "scenario",
+            "relationshipName": "team",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "cohort",
+            "otherEntityRelationshipName": "scenario",
+            "relationshipName": "cohort",
+            "otherEntityField": "id",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191130133325",
+    "entityTableName": "scenario",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
